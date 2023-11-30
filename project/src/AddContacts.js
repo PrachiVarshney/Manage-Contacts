@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-function AddContacts() {
+
+function AddContacts({addContact}) {
     const [contactData, setContactData] = useState({ name: "", email: "" });
 
     const handleChange = (e) => {
@@ -16,8 +17,11 @@ function AddContacts() {
             alert("Enter the details");
             return;
         }
-        console.log(contactData);
-    };
+        addContact(contactData)
+        setContactData({name:"",email:""})
+   
+    }
+   
 
     return (
         <div>
