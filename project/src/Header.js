@@ -1,5 +1,6 @@
 import React from 'react'
+import './App.css';
 export default function Header(){
 return(
-    <div>Manage Contacts</div>
+    <div className='heading'>Manage Contacts</div>
 )}

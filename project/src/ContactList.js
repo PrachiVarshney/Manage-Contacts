@@ -6,8 +6,8 @@ function ContactList({ contact, removeContact, className }) {
   const contactList = contact.map((val) => {
     return (
       <div key={val.id} className="contact-item">
-        <div>{val.data.name}</div>
-        <div>{val.data.email}</div>
+        <div><h3>Name:</h3>{val.data.name}</div>
+        <div><h3>Email:</h3>{val.data.email}</div>
         <span onClick={() => removeContact(val.id)}><MdDelete /></span>
       </div>
     );
